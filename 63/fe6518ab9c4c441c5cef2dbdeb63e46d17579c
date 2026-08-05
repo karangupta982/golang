@@ -1,0 +1,14 @@
+go-notes/2_simple_values/main.go
+  h_f32fe69d8c55b6 1-31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.20",
+  "base_commit_sha": "63fe6518ab9c4c441c5cef2dbdeb63e46d17579c",
+  "prompts": {},
+  "humans": {
+    "h_f32fe69d8c55b6": {
+      "author": "Karan gupta <gupta.karan1.gh@gmail.com>"
+    }
+  }
+}
