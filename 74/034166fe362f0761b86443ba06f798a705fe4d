@@ -1,0 +1,14 @@
+projects/go-api
+  h_f32fe69d8c55b6 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "74034166fe362f0761b86443ba06f798a705fe4d",
+  "prompts": {},
+  "humans": {
+    "h_f32fe69d8c55b6": {
+      "author": "Karan gupta <gupta.karan1.gh@gmail.com>"
+    }
+  }
+}
