@@ -1,0 +1,42 @@
+projects/go-api/.gitignore
+  h_f32fe69d8c55b6 1-28
+projects/go-api/cmd/students-api/main.go
+  h_f32fe69d8c55b6 1-96
+projects/go-api/concepts-notes/dependency-injection.md
+  h_f32fe69d8c55b6 1-26
+projects/go-api/concepts-notes/escape-analysis.md
+  h_f32fe69d8c55b6 1-35
+projects/go-api/concepts-notes/next-concept.md
+  h_f32fe69d8c55b6 1-3
+projects/go-api/concepts-notes/validator.md
+  h_f32fe69d8c55b6 1-63
+projects/go-api/go.mod
+  h_f32fe69d8c55b6 1-37
+projects/go-api/go.sum
+  h_f32fe69d8c55b6 1-71
+projects/go-api/internal/config/config.go
+  h_f32fe69d8c55b6 1-178
+projects/go-api/internal/http/handlers/student/student.go
+  h_f32fe69d8c55b6 1-94
+projects/go-api/internal/storage/sqlite/sqlite.go
+  h_f32fe69d8c55b6 1-219
+projects/go-api/internal/storage/storage.go
+  h_f32fe69d8c55b6 1-13
+projects/go-api/internal/types/types.go
+  h_f32fe69d8c55b6 1-8
+projects/go-api/internal/utils/response/response.go
+  h_f32fe69d8c55b6 1-54
+projects/go-api/steps.md
+  h_f32fe69d8c55b6 1-2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "b8e6884d366e74d8eadbc5ff414188a1633baae8",
+  "prompts": {},
+  "humans": {
+    "h_f32fe69d8c55b6": {
+      "author": "Karan gupta <gupta.karan1.gh@gmail.com>"
+    }
+  }
+}
