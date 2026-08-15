@@ -1,0 +1,88 @@
+go-notes/10_maps/maps.go
+  h_f32fe69d8c55b6 1-48
+go-notes/11_range/range.go
+  h_f32fe69d8c55b6 1-31
+go-notes/12_functions/functions.go
+  h_f32fe69d8c55b6 1-40
+go-notes/13_variadic_functions/variadic.go
+  h_f32fe69d8c55b6 1-22
+go-notes/14_closures/closures.go
+  h_f32fe69d8c55b6 1-21
+go-notes/15_pointers/pointers.go
+  h_f32fe69d8c55b6 1-26
+go-notes/16_structs/structs.go
+  h_f32fe69d8c55b6 1-103
+go-notes/17_interfaces/interface.go
+  h_f32fe69d8c55b6 1-56
+go-notes/18_enums/enums.go
+  h_f32fe69d8c55b6 1-42
+go-notes/19_generics/generics.go
+  h_f32fe69d8c55b6 1-78
+go-notes/20_goroutines/goroutines.go
+  h_f32fe69d8c55b6 1-155
+go-notes/21_channels/channels.go
+  h_f32fe69d8c55b6 1-235
+go-notes/22_mutex/mutex.go
+  h_f32fe69d8c55b6 1-44
+go-notes/23_files/example.txt
+  h_f32fe69d8c55b6 1
+go-notes/23_files/files.go
+  h_f32fe69d8c55b6 1-153
+go-notes/24_packages/auth/credentials.go
+  h_f32fe69d8c55b6 1-10
+go-notes/24_packages/auth/session.go
+  h_f32fe69d8c55b6 1-12
+go-notes/24_packages/go.mod
+  h_f32fe69d8c55b6 1-10
+go-notes/24_packages/go.sum
+  h_f32fe69d8c55b6 1-9
+go-notes/24_packages/packages.go
+  h_f32fe69d8c55b6 1-35
+go-notes/24_packages/user/user.go
+  h_f32fe69d8c55b6 1-9
+go-notes/25_important-topics/concurrency-patterns/concurrency-patterns.md
+  h_f32fe69d8c55b6 1-59
+go-notes/25_important-topics/concurrency-patterns/worker-pool.go
+  h_f32fe69d8c55b6 1-48
+go-notes/25_important-topics/interview-questions/inheritance.go
+  h_f32fe69d8c55b6 1-37
+go-notes/25_important-topics/topics.md
+  h_f32fe69d8c55b6 1-61
+go-notes/26_package_initialization/test.go
+  h_f32fe69d8c55b6 1-41
+go-notes/5_for/for.go
+  h_f32fe69d8c55b6 1-37
+go-notes/6_If_else/ifelse.go
+  h_f32fe69d8c55b6 1-37
+go-notes/7_switch/switch.go
+  h_f32fe69d8c55b6 1-166
+go-notes/8_arrays/arrays.go
+  h_f32fe69d8c55b6 1-25
+go-notes/9_slices/slice.go
+  h_f32fe69d8c55b6 1-93
+go-notes/go-api/.gitignore
+  h_f32fe69d8c55b6 1-35
+go-notes/go-api/go.mod
+  h_f32fe69d8c55b6 1-20
+go-notes/go-api/go.sum
+  h_f32fe69d8c55b6 1-30
+go-notes/go-api/internal/config/config.go
+  h_f32fe69d8c55b6 1-128
+go-notes/go-api/main.go
+  h_f32fe69d8c55b6 1
+go-notes/go-api/steps.md
+  h_f32fe69d8c55b6 1-2
+go-notes/go-features.md
+  h_f32fe69d8c55b6 1-86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "b9fd74ab0140b718cfb3c050ad6482fc2f63ee6c",
+  "prompts": {},
+  "humans": {
+    "h_f32fe69d8c55b6": {
+      "author": "Karan gupta <gupta.karan1.gh@gmail.com>"
+    }
+  }
+}
