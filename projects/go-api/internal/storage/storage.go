@@ -1,0 +1,13 @@
+package storage
+
+import "github.com/codersgyan/students-api/internal/types"
+
+
+// Storage defines the contract required by the handlers.
+// Any type implementing these methods automatically satisfies
+// this interface (implicit implementation in Go).
+type Storage interface {
+	CreateStudent(name string, email string, age int) (int64, error)
+	GetStudentById(id int64) (types.Student, error)
+	GetStudents() ([]types.Student, error)
+}
