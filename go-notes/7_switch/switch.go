@@ -93,23 +93,23 @@ func main(){
 
 
 
-	// // Method 2:
-	// // If you need to capture inputs that include spaces (like a full name, home address, or sentence), you should read from standard input (os.Stdin) using a Scanner. It reads until the user presses the Enter key.
+	// Method 2:
+	// If you need to capture inputs that include spaces (like a full name, home address, or sentence), you should read from standard input (os.Stdin) using a Scanner. It reads until the user presses the Enter key.
 	
-	// // os.Stdin is raw and low-level. It doesn't know what a "line" or a "sentence" is; it just streams raw computer bytes.
-	// // Because os.Stdin only deals in raw bytes, it is hard to work with directly. This is where bufio.NewScanner() comes in. 
-	// scanner := bufio.NewScanner(os.Stdin)
+	// os.Stdin is raw and low-level. It doesn't know what a "line" or a "sentence" is; it just streams raw computer bytes.
+	// Because os.Stdin only deals in raw bytes, it is hard to work with directly. This is where bufio.NewScanner() comes in. 
+	scanner := bufio.NewScanner(os.Stdin)
 
-	// fmt.Print("Enter your full name: ")
+	fmt.Print("Enter your full name: ")
 	
-	// // Scan() blocks execution until the user presses Enter
-	// // When your program hits if scanner.Scan(), the following sequence happens:It pauses (blocks) your program: The code stops executing and waits patiently because it looks at os.Stdin and sees nothing there yet.It listens for the Enter key: You type your name (e.g., Karan Gupta) and press Enter.It slices the text: The Scan() function actively searches for a newline character (the Enter key). Once it finds it, it grabs everything you typed before that Enter key, saves it inside its internal memory buffer, and stops reading.It returns a signal: Scan() returns a boolean value (true or false). If it successfully read your text, it returns true. This causes your if condition to pass, allowing the code inside the curly braces {} to run.
-	// if scanner.Scan() {
-	// 	// Text() extracts the input as a string
-	// 	// When you run fullName := scanner.Text(), you are saying: "Take that text you just buffered, convert it into a clean Go string, and hand it over to my fullName variable."
-	// 	fullName := scanner.Text()
-	// 	fmt.Printf("Welcome, %s!\n", fullName)
-	// }
+	// Scan() blocks execution until the user presses Enter
+	// When your program hits if scanner.Scan(), the following sequence happens:It pauses (blocks) your program: The code stops executing and waits patiently because it looks at os.Stdin and sees nothing there yet.It listens for the Enter key: You type your name (e.g., Karan Gupta) and press Enter.It slices the text: The Scan() function actively searches for a newline character (the Enter key). Once it finds it, it grabs everything you typed before that Enter key, saves it inside its internal memory buffer, and stops reading.It returns a signal: Scan() returns a boolean value (true or false). If it successfully read your text, it returns true. This causes your if condition to pass, allowing the code inside the curly braces {} to run.
+	if scanner.Scan() {
+		// Text() extracts the input as a string
+		// When you run fullName := scanner.Text(), you are saying: "Take that text you just buffered, convert it into a clean Go string, and hand it over to my fullName variable."
+		fullName := scanner.Text()
+		fmt.Printf("Welcome, %s!\n", fullName)
+	}
 
 
 	// Method 3:

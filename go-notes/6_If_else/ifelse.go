@@ -27,11 +27,11 @@ func main(){
 	}
 
 	// we can declare a variable inside the if statement
-	if age := 15; age > 18 {
+	if age := 16; age > 18 {
 		fmt.Println("You are an adult")
 	} else {
 		fmt.Println("You are a minor")
 	}
-
+	fmt.Println("age: ", age) // age = 15 and not 16
 	
 }

@@ -82,21 +82,21 @@ func main(){
 
 	fmt.Println(language)
 
-	newCustomer := customer{
-		name: "karan",
-		phone: "1023456789",
-	}
+	// newCustomer := customer{
+	// 	name: "karan",
+	// 	phone: "1023456789",
+	// }
 
-	myOrder2 := order{
-		id: "1",
-		amount: 323.00,
-		status: "received",
-		customer: customer{
-			name: "karan",
-			phone: "1023456789",
-		},
+	// myOrder2 := order{
+	// 	id: "1",
+	// 	amount: 323.00,
+	// 	status: "received",
+	// 	customer: customer{
+	// 		name: "karan",
+	// 		phone: "1023456789",
+	// 	},
 		
-	}	
+	// }	
 }
 
 

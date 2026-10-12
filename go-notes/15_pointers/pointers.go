@@ -24,3 +24,23 @@ func main(){
 	fmt.Println("num2 after change in main", num2)
 
 }
+
+
+
+// x          value
+
+// &x         address of x
+
+// var p *int
+//            p can hold the address of an int
+
+// p = &x
+//            p points to x
+
+// *p
+//            value stored at the address p points to
+
+// *p = 10
+//            modify the original value
+
+// Go always passes by value. When you want a function to modify the original variable, you usually pass its pointer.

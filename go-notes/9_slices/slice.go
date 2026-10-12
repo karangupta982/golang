@@ -91,3 +91,39 @@ func main(){
 //                                    Shared Memory Location (0xABC123): [ 999 | 2 ]
 	
 }
+
+// func modifySlice(s []int) {
+//     s[0] = 999       // Updates the underlying array! Original sees this.
+//     s = append(s, 4) // Changes the local COPY of the header's length. Original DOES NOT see this.
+//     fmt.Println("Inside function:", s) // [999, 2, 3, 4]
+// }
+
+// func main() {
+//     nums := []int{1, 2, 3}
+//     modifySlice(nums)
+//     fmt.Println("Outside function:", nums) // [999, 2, 3] (The '4' is missing!)
+// }
+
+
+// ---
+
+// type NumArray struct {
+//     prefixSum []int
+// }
+
+
+// func Constructor(nums []int) NumArray {
+//     arr := make([]int, len(nums) + 1)  // Use make() to dynamically allocate a slice instead of a fixed array
+
+//     for i := range nums {
+//         arr[i + 1] = arr[i] + nums[i] 
+//     }
+//     return NumArray{
+//         prefixSum: arr,
+//     }
+// }
+
+
+// func (this *NumArray) SumRange(left int, right int) int {
+//     return this.prefixSum[right+1] - this.prefixSum[left]
+// }
