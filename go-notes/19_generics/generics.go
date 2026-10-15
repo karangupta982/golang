@@ -21,6 +21,7 @@ import (
 // 	}
 // }
 //						T any or T interface{} or T comparable can also be written
+//                      |     
 func iterateOverArray[T int | string | bool, V string](nums []T, name V){
 	for _, val := range nums{
 		fmt.Println(val, name)
@@ -43,7 +44,7 @@ func GetMax[T cmp.Ordered](a, b T) T {
 }
 
 
-// 2. Creating Custom Constraints (The ~ operator)You can define a custom interface that acts as a constraint list using a pipe symbol (|) for "OR" relationships.
+// 2. Creating Custom Constraints (The ~ operator) You can define a custom interface that acts as a constraint list using a pipe symbol (|) for "OR" relationships.
 // Numbers can only be int, int64, or float64
 type Numbers interface {
 	~int | ~int64 | ~float64
@@ -52,9 +53,8 @@ type Numbers interface {
 func Sum[T Numbers](a, b T) T {
 	return a + b
 }
-// (The tilde ~ symbol is a neat trick—it means the function also accepts custom types derived from those primitives, like type MyAge int).
+// (The tilde ~ symbol is a neat trick — it means the function also accepts custom types derived from those primitives, like type MyAge int).
  
-
 
 func main(){
 
