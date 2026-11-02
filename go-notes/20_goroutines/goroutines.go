@@ -59,7 +59,7 @@ import (
 
 // * G (Goroutine): The lightweight thread of execution (your code).
 // * M (Machine): A physical OS thread created and managed by the operating system.
-// * P (Processor): A logical context or resource required to execute Go code. The number of Ps exactly matches the number of CPU cores on your computer.
+// * P (Processor): A logical context or resource required to execute Go code. The number of Processors exactly matches the number of CPU cores on your computer.
 
 // ------------------------------
 // ## The Architecture: Local Run Queues
@@ -139,7 +139,7 @@ import (
 
 
 func task(task_id int, wg *sync.WaitGroup){
-	defer wg.Done() // defer runs as a cleanup function in react after this function gets completed, here it will decrease wg count by 1 when function gets complete
+	defer wg.Done() // defer runs as a cleanup function like in react after this function gets completed, here it will decrease wg count by 1 when function gets complete
 	fmt.Println("Doing task", task_id)
 }
 
@@ -153,3 +153,19 @@ func main(){
 
 	wg.Wait() // will wait untill all wg get 0 value
 }
+
+
+
+// Direct Comparison (Concurrency vs Parallelism)
+
+// Concurrency 🔀																													Parallelism 🏃‍♂️🏃‍♂️
+// Composition & Design: Structuring your program into independent tasks that can overlap in time.									Hardware Execution: Literally running multiple tasks at the exact same physical millisecond.
+
+// Can run on a single CPU core (or multiple).																						Requires multiple CPU cores or processors.
+
+// The system switches back and forth between tasks rapidly (context switching), creating the illusion of simultaneous execution.	Tasks run independently on separate hardware tracks simultaneously.
+
+// Efficiency & Structure: Managing many things (like I/O waits, user requests) without getting blocked.							Speed & Performance: Heavy, computational throughput by spreading the workload.
+
+
+

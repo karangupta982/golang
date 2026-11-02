@@ -1,3 +1,6 @@
+go to this link to know more about go concurrency pattern: https://chatgpt.com/share/6ae4a45d-b4b0-83ee-a32e-1008b6e5adc7
+
+
 ## Concurrency patterns in Go are repeatable, structured design blueprints that use goroutines and channels to solve specific multi-threading problems cleanly. Because Go's concurrency model is based on CSP (Communicating Sequential Processes), these patterns focus heavily on how data flows and how tasks are synchronized without corrupting memory. [1, 2, 3, 4, 5] 
 There is no single "official" count because engineers combine these primitives creatively. However, the Go community recognizes 7 core concurrency patterns that form the foundation of almost all high-performance Go applications. [6, 7] 
 Here is the breakdown of all 7 patterns, what they do, and how they help you.

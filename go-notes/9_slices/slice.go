@@ -127,3 +127,32 @@ func main(){
 // func (this *NumArray) SumRange(left int, right int) int {
 //     return this.prefixSum[right+1] - this.prefixSum[left]
 // }
+
+
+----
+
+// why b := a does not copy slice a?
+// b := a does make a copy, but it only copies the slice header, not the underlying array where the actual data lives. 
+// 1. What is a Slice really?
+// A slice is not the data itself. It is a small descriptor struct (a header) containing just three things:
+
+// A pointer pointing to an underlying array in memory.
+
+// A length (len) tracking how many elements are currently in use.
+
+// A capacity (cap) tracking the maximum size before reallocation is needed.
+
+// 2. What happens during b := a?
+// Go follows a strict rule: assignment always copies the value.
+
+// When you write b := a, Go copies the value of a. Because a is a slice, its "value" is that small header (pointer + length + capacity).
+
+// b gets its own brand-new header.
+
+// However, the pointer inside b's header is copied from a, meaning it points to the exact same underlying array.
+
+// The underlying array is always a rigid, continuous block of memory.
+
+// The slice is just a remote control (header) pointing to it.
+
+// When you outgrow the array, Go doesn't magically stretch the old memory block (it can't, because other data might be sitting right next to it in RAM). Instead, Go abandons the old array, builds a bigger continuous array somewhere else, and points your slice to the new one.

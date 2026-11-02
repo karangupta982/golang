@@ -37,7 +37,7 @@ func mailSender(emailChan <-chan string, done chan<- bool){
 	defer func(){ done<- true }()
 
 	// When you use a for mail := range emailChan loop, it tells the goroutine: "Keep reading from this channel forever until someone explicitly closes it."
-	// Because your main function finishes adding the 5 emails but never closes the channel, the mailSender goroutine processes all 5 emails and then freezes (blocks) on the range line, waiting for a 6th email that will never arrive.Since mailSender is permanently stuck waiting for more emails, it never reaches your defer func() { done <- true }() line. Meanwhile, your main function is stuck waiting at <-done. Both goroutines are asleep forever, causing the deadlock.
+	// Because your main function finishes adding the 5 emails but never closes the channel, the mailSender goroutine processes all 5 emails and then freezes (blocks) on the range line, waiting for a 6th email that will never arrive. Since mailSender is permanently stuck waiting for more emails, it never reaches your defer func() { done <- true }() line. Meanwhile, your main function is stuck waiting at <-done. Both goroutines are asleep forever, causing the deadlock.
 	for mail := range emailChan{
 		fmt.Println("Sending messages to ",mail)
 		time.Sleep(time.Second)
@@ -58,7 +58,7 @@ func main(){
 
 	// We used select here because you are dealing with multiple channels and you don't know which one will receive data first.The select statement acts like a switch board for channels. It lets a single goroutine listen to multiple channel operations simultaneously and executes whichever case is ready first.
 
-	// What happens WITH select? (The Solution)By using select, you remove the rigid order. You are telling Go: "Look at both chan1 and chan2 at the same time. Whichever one wakes up first with data, handle that case immediately."Non-blocking choice: It constantly polls all listed cases. If chan2 finishes first, the chan2 case runs immediately.Fairness: If both channels happen to be ready at the exact same fraction of a second, Go picks one at random. This prevents one channel from starving out the other.The Loop Factor: Because you wrapped the select in a for i := 0; i < 2; i++ loop, it executes exactly twice. The first iteration grabs whichever channel finishes first, and the second iteration grabs the remaining channel.Summary AnalogyWithout select (Sequential code): You are standing at a grocery store checkout line. You must wait for the person in front of you to finish paying before you can even look at the next open register.With select: You are standing in the middle of two registers. Whichever cashier yells "Next!" first is the one you walk over to.
+	// What happens WITH select? (The Solution)By using select, you remove the rigid order. You are telling Go: "Look at both chan1 and chan2 at the same time. Whichever one wakes up first with data, handle that case immediately."Non-blocking choice: It constantly polls all listed cases. If chan2 finishes first, the chan2 case runs immediately.Fairness: If both channels happen to be ready at the exact same fraction of a second, Go picks one at random. This prevents one channel from starving out the other.The Loop Factor: Because you wrapped the select in a for i := 0; i < 2; i++ loop, it executes exactly twice. The first iteration grabs whichever channel finishes first, and the second iteration grabs the remaining channel.
 
 	for i:=0; i<2;i++{
 		select{

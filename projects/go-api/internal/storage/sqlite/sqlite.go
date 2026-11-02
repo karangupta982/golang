@@ -7,13 +7,16 @@ import (
 	"github.com/codersgyan/students-api/internal/config"
 	"github.com/codersgyan/students-api/internal/types"
 	_ "github.com/mattn/go-sqlite3"
+
+	// Imports a package without exposing its package name for direct use.
+// 	- Package initialization still runs.
+// - Its init() functions execute.
+// - Its registration side effects take effect.
+// Blank imports are used for initialization side effects, not specifically for indirect library dependencies.
 	// The underscore (_) is called a blank import. We don't call functions directly from go-sqlite3 in our code. However, Go's standard database/sql package is generic—it doesn't know how to talk to SQLite, MySQL, or Postgres out of the box. By using _, we force the go-sqlite3 driver to execute its hidden init() function, which registers the SQLite engine driver with Go's standard database package behind the scenes.
 	// Without that single underscore import, when you later try to run sql.Open("sqlite3", ...), Go will panic with the message: sql: unknown driver "sqlite3".
 )
-// It defines a structural type named Sqlite which encapsulates a pointer to a SQL database pool (*sql.DB).
-// Sqlite is one concrete implementation of the Storage interface.
-// It knows HOW to store data in SQLite.
-// Handlers only know about Storage, not Sqlite.
+
 type Sqlite struct {
 	Db *sql.DB
 }
